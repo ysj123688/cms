@@ -24,7 +24,7 @@
 	    //如果未经过验证，则返回错误提示
 	    public function beforeAction(){
 	    	$request = Yii::$app->request;
-	    	if(empty(User::accessAble($request->get('token')))){
+	    	if(empty(User::accessAble($request->get('access-token')))){
 	    		$response = array(
 	    			 "name" => "Unauthorized",
 					  "message" => "Your request was made with invalid credentials.",

@@ -22,7 +22,9 @@ return [
             'csrfParam' => '_csrf-frontend',
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
-            ]
+                'text/json' => 'yii\web\JsonParser',
+            ],
+           // 'cookieValidationKey' => 'true',
         ],
         'user' => [
             //'identityClass' => 'common\models\ApiAccess',
@@ -46,7 +48,7 @@ return [
             'enableStrictParsing' => false,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => ['v1/user','v1/category']],
+                ['class' => 'yii\rest\UrlRule', 'controller' => ['v1/user','v1/category','v1/document','v1/log','v1/picture']],
                 
             ],
         ],
